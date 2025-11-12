@@ -1,2 +1,4 @@
 .venv/
 venv/
+clientes.txt
+/**/*/__pycache__/
