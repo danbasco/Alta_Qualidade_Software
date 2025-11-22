@@ -1,7 +1,13 @@
+"""
+Module Pedido.py
+"""
+
 from models.calculadora import PrecoCalculadora
 
+
 def processar_pedido(p):
-    
+    """Processar_pedido: processa o pedido e calcula o preço a partir de PrecoCalculadora"""
+
     prod = p.get("produto")
     qtd = p.get("qtd")
     cupom = p.get("cupom")
@@ -18,7 +24,7 @@ def processar_pedido(p):
         preco = 0
 
     preco = calculadora.calcular_desconto(cupom, preco)
-    
+
     if prod == "diesel":
         preco = round(preco, 0)
 

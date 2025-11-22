@@ -1,9 +1,9 @@
-"""Importing Services to process order"""
-from services.pedido import processar_pedido
+"""Main Module"""
+
 from models.clientes import Clientes
+from services.pedido import processar_pedido
 
 pedidos = [
-
     {"cliente": "TransLog", "produto": "diesel", "qtd": 1200, "cupom": "MEGA10"},
     {"cliente": "MoveMais", "produto": "gasolina", "qtd": 300, "cupom": None},
     {"cliente": "EcoFrota", "produto": "etanol", "qtd": 50, "cupom": "NOVO5"},
@@ -11,15 +11,13 @@ pedidos = [
 ]
 
 clientes = [
-
     Clientes(nome="Carlos", email="carlos@petrobahia.com", cnpj=12345),
-    Clientes(nome="Ana Paula", email="ana@@petrobahia", cnpj=123)
-
+    Clientes(nome="Ana Paula", email="ana@@petrobahia", cnpj=123),
 ]
 
-"""Function main"""
-def main():
 
+def main():
+    """Function main"""
     print("==== Início processamento PetroBahia ====")
 
     for c in clientes:
@@ -38,7 +36,6 @@ def main():
 
     print("TOTAL =", sum(valores))
     print("==== Fim processamento PetroBahia ====")
-
 
 
 if __name__ == "__main__":
