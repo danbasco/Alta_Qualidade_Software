@@ -2,7 +2,7 @@
 Module Pedido.py
 """
 
-from models.calculadora import PrecoCalculadora
+from src.models.calculadora import PrecoCalculadora
 
 
 def processar_pedido(p):
