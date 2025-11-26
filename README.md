@@ -11,12 +11,25 @@ O código está **mal estruturado** e **difícil de manter**. O objetivo é **re
 
 ## Estrutura
 ```
-src/
-├── main.py
-└── legacy/
-    ├── clientes.py
-    ├── pedido_service.py
-    └── preco_calculadora.py
+.
+├── pytest.ini
+├── requirements.txt
+├── report.html
+├── README.md
+├── src/
+│   ├── main.py
+│   ├── models/
+│   │   ├── calculadora.py
+│   │   └── clientes.py
+│   └── services/
+│       └── pedido.py
+└── tests/
+    ├── __init__.py
+    ├── test_calculadora.py
+    ├── test_clientes.py
+    ├── test_pedido.py
+    ├── tests_calculadora.py
+    └── tests_clientes.py
 ```
 
 ## Instruções
